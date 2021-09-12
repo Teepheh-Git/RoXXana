@@ -1,46 +1,80 @@
-import React from 'react';
+import React, {createRef, useEffect, useRef, useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, ScrollView, ImageBackground, Animated, Image} from 'react-native';
-import {HeaderBar} from '../components';
+import {CustomButton, HeaderBar} from '../components';
 import {COLORS, constants, dummyData, FONTS, SIZES} from '../constants';
 import {connect} from 'react-redux';
 import icons from '../constants/icons';
 import appTheme from '../constants/theme';
 import images from '../constants/images';
 
-const promoTabs = constants.promoTabs;
+const promoTabs = constants.promoTabs.map((promoTabs) => ({
+    ...promoTabs,
+    ref: createRef(),
+}));
 
-const TabIndicator = ({}) => {
+const TabIndicator = ({measureLayout, scrollX}) => {
+    const inputRange = promoTabs.map((_, i) => i * SIZES.width);
+    const tabIndicatorWidth = scrollX.interpolate({
+        inputRange,
+        outputRange: measureLayout.map(measure => measure.width),
+    });
+
+
     return (
-        <View style={{
-            position: 'absolute',
-            height: '100%',
-            width: 100,
-            left: 0,
-            borderRadius: SIZES.radius,
-            backgroundColor: COLORS.primary,
+        <Animated.View
+            style={{
+                position: 'absolute',
+                height: '100%',
+                width: tabIndicatorWidth,
+                left: 0,
+                borderRadius: SIZES.radius,
+                backgroundColor: COLORS.primary,
 
-        }}>
+            }}/>
 
-
-        </View>
 
     );
 };
 
-const Tabs = ({appTheme}) => {
+const Tabs = ({appTheme, scrollX}) => {
+
+    const [measureLayout, setMeasureLayout] = useState([]);
+    const containerRef = useRef();
+
+
+    useEffect(() => {
+        let ml = [];
+        promoTabs.forEach(promo => {
+            promo.ref.current.measureLayout(
+                containerRef.current,
+                (x, y, width, height) => {
+                    console.log(x, y, width, height);
+                    ml.push({x, y, width, height});
+
+                    if (ml.length === promoTabs.length) {
+                        setMeasureLayout(ml);
+                    }
+                },
+            );
+        });
+
+    }, [containerRef.current]);
+
     return (
-        <View style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginTop: SIZES.padding,
-            borderRadius: SIZES.radius,
-            backgroundColor: appTheme.tabBackgroundColor,
-        }}>
+        <View
+            ref={containerRef}
+            style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginTop: SIZES.padding,
+                borderRadius: SIZES.radius,
+                backgroundColor: appTheme.tabBackgroundColor,
+            }}>
 
             {/*Tab Indicator*/}
-
-            <TabIndicator/>
+            {measureLayout.length > 0 &&
+            <TabIndicator measureLayout={measureLayout} scrollX={scrollX}/>}
 
 
             {/*Tab */}
@@ -53,12 +87,14 @@ const Tabs = ({appTheme}) => {
                     }} key={`PromoTabs-${index}`}>
 
 
-                        <View style={{
-                            paddingHorizontal: 15,
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            height: 40,
-                        }}>
+                        <View
+                            ref={item.ref}
+                            style={{
+                                paddingHorizontal: 15,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                height: 40,
+                            }}>
 
                             <Text style={{
                                 color: COLORS.white, ...FONTS.h3,
@@ -169,7 +205,10 @@ const Home = ({navigation, appTheme}) => {
 
                 {/*Header Tabs*/}
 
-                <Tabs appTheme={appTheme}/>
+                <Tabs
+                    appTheme={appTheme}
+                    scrollX={scrollX}
+                />
 
 
                 {/*Details*/}
@@ -178,6 +217,7 @@ const Home = ({navigation, appTheme}) => {
                     data={dummyData.promos}
                     horizontal
                     pagingEnabled
+                    showsHorizontalScrollIndicator={false}
                     scrollEventThrottle={16}
                     keyExtractor={item => `${item.id}`}
                     snapToAlignment={'center'}
@@ -223,6 +263,22 @@ const Home = ({navigation, appTheme}) => {
 
 
                                 {/*button*/}
+
+                                <CustomButton
+                                    containerStyle={{
+                                        marginTop: 10,
+                                        paddingHorizontal: SIZES.padding,
+                                        paddingVertical: SIZES.base,
+                                        borderRadius: SIZES.radius * 2,
+                                    }}
+                                    labelStyle={{
+                                        ...FONTS.h3,
+                                    }}
+                                    isPrimaryButton
+                                    label={'Order Now'}
+                                    onPress={() => {
+                                        navigation.navigate('Location');
+                                    }}/>
 
 
                             </View>
