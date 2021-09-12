@@ -1,4 +1,4 @@
-import React, {createRef, useEffect, useRef, useState} from 'react';
+import React, {createRef, useCallback, useEffect, useRef, useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, ScrollView, ImageBackground, Animated, Image} from 'react-native';
 import {CustomButton, HeaderBar} from '../components';
 import {COLORS, constants, dummyData, FONTS, SIZES} from '../constants';
@@ -18,6 +18,10 @@ const TabIndicator = ({measureLayout, scrollX}) => {
         inputRange,
         outputRange: measureLayout.map(measure => measure.width),
     });
+    const translateX = scrollX.interpolate({
+        inputRange,
+        outputRange: measureLayout.map(measure => measure.x),
+    });
 
 
     return (
@@ -29,6 +33,7 @@ const TabIndicator = ({measureLayout, scrollX}) => {
                 left: 0,
                 borderRadius: SIZES.radius,
                 backgroundColor: COLORS.primary,
+                transform: [{translateX}],
 
             }}/>
 
@@ -36,10 +41,12 @@ const TabIndicator = ({measureLayout, scrollX}) => {
     );
 };
 
-const Tabs = ({appTheme, scrollX}) => {
+const Tabs = ({appTheme, scrollX, onPromoTabPress}) => {
 
     const [measureLayout, setMeasureLayout] = useState([]);
     const containerRef = useRef();
+
+    const tabPosition = Animated.divide(scrollX, SIZES.width);
 
 
     useEffect(() => {
@@ -81,10 +88,19 @@ const Tabs = ({appTheme, scrollX}) => {
 
             {promoTabs.map((item, index) => {
 
+                const textColor = tabPosition.interpolate({
+                    inputRange: [index - 1, index, index + 1],
+                    outputRange: [COLORS.lightGray2, COLORS.white, COLORS.lightGray2],
+                    extrapolate: 'clamp',
+                });
+
+
                 return (
-                    <TouchableOpacity onPress={() => {
-                        console.log(item);
-                    }} key={`PromoTabs-${index}`}>
+                    <TouchableOpacity
+                        onPress={() => {
+                            onPromoTabPress(index);
+                        }}
+                        key={`PromoTabs-${index}`}>
 
 
                         <View
@@ -96,9 +112,9 @@ const Tabs = ({appTheme, scrollX}) => {
                                 height: 40,
                             }}>
 
-                            <Text style={{
-                                color: COLORS.white, ...FONTS.h3,
-                            }}>{item.title}</Text>
+                            <Animated.Text style={{
+                                color: textColor, ...FONTS.h3,
+                            }}>{item.title}</Animated.Text>
 
                         </View>
 
@@ -114,6 +130,14 @@ const Home = ({navigation, appTheme}) => {
 
 
     const scrollX = React.useRef(new Animated.Value(0)).current;
+
+    const promoScrollViewRef = useRef();
+
+    const onPromoTabPress = useCallback(promoTabIndex => {
+        promoScrollViewRef?.current?.scrollToOffset({
+            offset: promoTabIndex * SIZES.width,
+        });
+    });
 
     function renderAvailableRewards() {
         return (
@@ -197,7 +221,7 @@ const Home = ({navigation, appTheme}) => {
 
             </TouchableOpacity>
         );
-    }
+    };
 
     function renderPromoDeals() {
         return (
@@ -208,12 +232,14 @@ const Home = ({navigation, appTheme}) => {
                 <Tabs
                     appTheme={appTheme}
                     scrollX={scrollX}
+                    onPromoTabPress={onPromoTabPress}
                 />
 
 
                 {/*Details*/}
 
                 <Animated.FlatList
+                    ref={promoScrollViewRef}
                     data={dummyData.promos}
                     horizontal
                     pagingEnabled
