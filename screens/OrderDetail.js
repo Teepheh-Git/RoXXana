@@ -4,11 +4,14 @@ import {
     Text,
     StyleSheet,
 } from 'react-native';
+import {connect} from 'react-redux';
 
-const OrderDetail = () => {
+const OrderDetail = ({navigation, route, appTheme}) => {
     return (
         <View style={styles.container}>
-            <Text>OrderDetail</Text>
+
+            {/*stopped@ 2:16:10*/}
+
         </View>
     );
 };
@@ -16,9 +19,20 @@ const OrderDetail = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
     },
 });
 
-export default OrderDetail;
+
+function mapStateToProps(state) {
+    return {
+        appTheme: state.appTheme,
+        error: state.error,
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {};
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(OrderDetail);
