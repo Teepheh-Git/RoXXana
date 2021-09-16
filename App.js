@@ -1,5 +1,5 @@
 import React from 'react';
-import {Location, Order, OrderDetail} from './screens';
+import {Order, OrderDetail} from './screens';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SplashScreen from 'react-native-splash-screen';
@@ -10,6 +10,7 @@ import thunk from 'redux-thunk';
 import themeReducer from './stores/themeReducer';
 
 import Tabs from './navigation/tabs';
+import LocationScreen from './screens/LocationScreen';
 
 const Stack = createStackNavigator();
 
@@ -43,7 +44,7 @@ const App = () => {
 
                     <Stack.Screen
                         name="Location"
-                        component={Location}
+                        component={LocationScreen}
                     />
 
                     <Stack.Screen
