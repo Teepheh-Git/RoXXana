@@ -6,9 +6,9 @@ import {
 import {createBottomTabNavigator, BottomTabBar} from '@react-navigation/bottom-tabs';
 import Svg, {Path} from 'react-native-svg';
 
-import {Rewards} from '../screens';
 import {COLORS, SIZES, icons} from '../constants';
 import HomeScreen from '../screens/HomeScreen';
+import RewardScreen from '../screens/RewardScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -144,8 +144,8 @@ const Tabs = () => {
                 }}
             />
             <Tab.Screen
-                name="Rewards"
-                component={Rewards}
+                name="Reward"
+                component={RewardScreen}
                 options={{
                     tabBarIcon: ({focused}) => (
                         <Image

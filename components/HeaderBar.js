@@ -20,7 +20,7 @@ const HeaderBar = ({appTheme, toggleTheme}) => {
             style={{
                 height: 150,
                 width: '100%',
-                backgroundColor: COLORS.purple,
+                backgroundColor: COLORS.fuschia,
                 flexDirection: 'row',
             }}>
 

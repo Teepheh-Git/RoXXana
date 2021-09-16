@@ -42,7 +42,7 @@ const HomeScreen = ({navigation, appTheme}) => {
 
                 {/*Reward section*/}
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('Rewards')}
+                    onPress={() => navigation.navigate('Reward')}
                     style={styles.touchableOpacity}>
 
                     {/*Reward cup section*/}

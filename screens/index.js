@@ -2,12 +2,12 @@ import Home from './HomeScreen';
 import Location from './Location';
 import Order from './Order';
 import OrderDetail from './OrderDetail';
-import Rewards from './Rewards';
+import Reward from './RewardScreen';
 
 export {
     Home,
     Location,
     Order,
     OrderDetail,
-    Rewards,
+    Reward,
 };
