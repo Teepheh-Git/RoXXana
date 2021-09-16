@@ -90,6 +90,8 @@ export const lightTheme = {
 
 export const selectedTheme = darkTheme;
 
-const appTheme = {COLORS, SIZES, FONTS, darkTheme, lightTheme};
+const appTheme = {
+    COLORS, SIZES, FONTS, darkTheme, lightTheme, backgroundColor: undefined,
+};
 
 export default appTheme;
