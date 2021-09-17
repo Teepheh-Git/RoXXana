@@ -106,8 +106,7 @@ const OrderDetailScreen = ({navigation, route, appTheme}) => {
                                     style={styles.brushImage}
                                     imageStyle={{tintColor: selectedSize === 20 ? COLORS.primary : COLORS.gray2}}>
                                 </ImageBackground>
-                                <Text style={styles.brushPrice}>N4,500</Text>
-
+                                <Text style={styles.brushPrice}>₦4,500</Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity
@@ -118,7 +117,7 @@ const OrderDetailScreen = ({navigation, route, appTheme}) => {
                                     style={styles.brushImage2}
                                     imageStyle={{tintColor: selectedSize === 32 ? COLORS.primary : COLORS.gray2}}>
                                 </ImageBackground>
-                                <Text style={styles.brushPrice2}>N6,999.99</Text>
+                                <Text style={styles.brushPrice2}>₦6,999.99</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
