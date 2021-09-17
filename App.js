@@ -1,5 +1,4 @@
 import React from 'react';
-import {OrderDetail} from './screens';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SplashScreen from 'react-native-splash-screen';
@@ -12,6 +11,7 @@ import themeReducer from './stores/themeReducer';
 import Tabs from './navigation/tabs';
 import LocationScreen from './screens/LocationScreen';
 import OrderScreen from './screens/OrderScreen';
+import OrderDetailScreen from './screens/OrderDetailScreen';
 
 const Stack = createStackNavigator();
 
@@ -55,7 +55,7 @@ const App = () => {
 
                     <Stack.Screen
                         name="OrderDetail"
-                        component={OrderDetail}
+                        component={OrderDetailScreen}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

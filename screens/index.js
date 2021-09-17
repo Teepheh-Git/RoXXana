@@ -1,7 +1,7 @@
 import Home from './HomeScreen';
 import Location from './LocationScreen';
 import Order from './OrderScreen';
-import OrderDetail from './OrderDetail';
+import OrderDetail from './OrderDetailScreen';
 import Reward from './RewardScreen';
 
 export {
