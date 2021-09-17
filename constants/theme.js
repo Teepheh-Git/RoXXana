@@ -12,7 +12,7 @@ export const COLORS = {
     lightPrimary: '#e8b6b7',
     white: '#fff',
     white1: '#F1E6D8',
-    lightGreen: '#7EBDA2',
+    deepPurple: '#420b4d',
     lightGreen2: '#BED2BB',
     // deepPink: '#bb5e8a',
     red2: '#FF7363',

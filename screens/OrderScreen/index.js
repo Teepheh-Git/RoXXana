@@ -17,7 +17,7 @@ const OrderScreen = ({navigation, route, appTheme}) => {
 
     const [selectedLocation, setSelectedLocation] = useState(null);
     const [selectedTab, setSelectedTab] = useState(0);
-    const [selectedCategory, setSelectedCategory] = useState('Foundation');
+    const [selectedCategory, setSelectedCategory] = useState('LipGloss');
     const [menu, setMenu] = useState(null);
 
     useEffect(() => {

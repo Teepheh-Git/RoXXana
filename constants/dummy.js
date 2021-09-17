@@ -175,7 +175,7 @@ export const menuList = [
     },
 ];
 
-export const milkList = [
+export const cosmeticsList = [
     {
         id: 1,
         name: 'CosmeKIt mini',
@@ -222,7 +222,7 @@ const dummyData = {
     availableRewards,
     locations,
     menuList,
-    milkList,
+    milkList: cosmeticsList,
     promos,
 };
 

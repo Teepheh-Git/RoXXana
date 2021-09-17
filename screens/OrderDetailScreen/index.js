@@ -18,9 +18,9 @@ const OrderDetailScreen = ({navigation, route, appTheme}) => {
 
     const [selectedItem, setSelectedItem] = useState(null);
     const [selectedSize, setSelectedSize] = useState(32);
-    const [selectedMilkIndex, setSelectedMilkIndex] = useState(0);
-    const [selectedSweetnessLevel, setSelectedSweetnessLevel] = useState(50);
-    const [selectedIceLevel, setSelectedIceLevel] = useState(50);
+    const [selectedCosmeKitIndex, setSelectedCosmeKitIndex] = useState(0);
+    const [selectedOpacityLevel, setSelectedOpacityLevel] = useState(50);
+    const [selectedAuthLevel, setSelectedAuthLevel] = useState(50);
 
     useEffect(() => {
 
@@ -31,30 +31,30 @@ const OrderDetailScreen = ({navigation, route, appTheme}) => {
 
 
     function milkButtonHandler(action) {
-        if (action === 'next' && selectedMilkIndex < dummy.milkList.length - 1) {
-            setSelectedMilkIndex(selectedMilkIndex + 1);
-        } else if (action === 'prev' && selectedMilkIndex > 0) {
-            setSelectedMilkIndex(selectedMilkIndex - 1);
+        if (action === 'next' && selectedCosmeKitIndex < dummy.milkList.length - 1) {
+            setSelectedCosmeKitIndex(selectedCosmeKitIndex + 1);
+        } else if (action === 'prev' && selectedCosmeKitIndex > 0) {
+            setSelectedCosmeKitIndex(selectedCosmeKitIndex - 1);
 
         }
 
     }
 
-    function sweetnessLevelButtonHandler(action) {
-        if (action === '+' && selectedSweetnessLevel < 100) {
-            setSelectedSweetnessLevel(selectedSweetnessLevel + 25);
-        } else if (action === '-' && selectedSweetnessLevel > 0) {
-            setSelectedSweetnessLevel(selectedSweetnessLevel - 25);
+    function opacityLevelButtonHandler(action) {
+        if (action === '+' && selectedOpacityLevel < 100) {
+            setSelectedOpacityLevel(selectedOpacityLevel + 25);
+        } else if (action === '-' && selectedOpacityLevel > 0) {
+            setSelectedOpacityLevel(selectedOpacityLevel - 25);
 
         }
 
     }
 
-    function iceLevelButtonHandler(action) {
-        if (action === '+' && selectedIceLevel < 100) {
-            setSelectedIceLevel(selectedIceLevel + 25);
-        } else if (action === '-' && selectedIceLevel > 0) {
-            setSelectedIceLevel(selectedIceLevel - 25);
+    function AuthLevelButtonHandler(action) {
+        if (action === '+' && selectedAuthLevel < 100) {
+            setSelectedAuthLevel(selectedAuthLevel + 25);
+        } else if (action === '-' && selectedAuthLevel > 0) {
+            setSelectedAuthLevel(selectedAuthLevel - 25);
 
         }
 
@@ -84,7 +84,6 @@ const OrderDetailScreen = ({navigation, route, appTheme}) => {
                 </View>
 
                 {/*Details*/}
-
                 <View style={styles.detailsView}>
 
                     {/*Name and Desc*/}
@@ -140,7 +139,7 @@ const OrderDetailScreen = ({navigation, route, appTheme}) => {
                                 />
 
                                 <Image
-                                    source={dummyData.milkList[selectedMilkIndex].image}
+                                    source={dummyData.milkList[selectedCosmeKitIndex].image}
                                     resizeMode={'contain'}
                                     style={styles.kitImage}
                                 />
@@ -152,7 +151,7 @@ const OrderDetailScreen = ({navigation, route, appTheme}) => {
                                     iconStyle={styles.kitRightIconStyle}
                                 />
                             </View>
-                            <Text style={styles.cosmekitName}>{dummyData.milkList[selectedMilkIndex].name}</Text>
+                            <Text style={styles.cosmekitName}>{dummyData.milkList[selectedCosmeKitIndex].name}</Text>
                         </View>
 
 
@@ -164,18 +163,18 @@ const OrderDetailScreen = ({navigation, route, appTheme}) => {
                                 <View style={styles.opacityView}>
                                     <IconButton
                                         icon={icons.leftArrow}
-                                        onPress={() => sweetnessLevelButtonHandler('-')}
+                                        onPress={() => opacityLevelButtonHandler('-')}
                                         containerStyle={styles.opacityLeftIconButton}
                                         iconStyle={styles.opacityLeftIconStyle}
                                     />
 
                                     <View style={styles.opacityBox}>
-                                        <Text style={styles.opacityBoxText}>{selectedSweetnessLevel}%</Text>
+                                        <Text style={styles.opacityBoxText}>{selectedOpacityLevel}%</Text>
                                     </View>
 
                                     <IconButton
                                         icon={icons.rightArrow}
-                                        onPress={() => sweetnessLevelButtonHandler('+')}
+                                        onPress={() => opacityLevelButtonHandler('+')}
                                         containerStyle={styles.opacityRightIconButton}
                                         iconStyle={styles.opacityRightIconStyle}
                                     />
@@ -189,18 +188,18 @@ const OrderDetailScreen = ({navigation, route, appTheme}) => {
                                 <View style={styles.authView}>
                                     <IconButton
                                         icon={icons.leftArrow}
-                                        onPress={() => iceLevelButtonHandler('-')}
+                                        onPress={() => AuthLevelButtonHandler('-')}
                                         containerStyle={styles.authLeftIconButton}
                                         iconStyle={styles.authLeftIconStyle}
                                     />
 
                                     <View style={styles.authBox}>
-                                        <Text style={styles.authBoxText}>{selectedIceLevel}%</Text>
+                                        <Text style={styles.authBoxText}>{selectedAuthLevel}%</Text>
                                     </View>
 
                                     <IconButton
                                         icon={icons.rightArrow}
-                                        onPress={() => iceLevelButtonHandler('+')}
+                                        onPress={() => AuthLevelButtonHandler('+')}
                                         containerStyle={styles.authRightIconButton}
                                         iconStyle={styles.authRightIconStyle}
                                     />
