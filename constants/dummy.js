@@ -59,7 +59,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/brush.png'),
-        category: 'Milk Tea',
+        category: 'Brush',
     },
     {
         id: 2,
@@ -67,7 +67,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/brush.png'),
-        category: 'Milk Tea',
+        category: 'Lipstick',
     },
     {
         id: 3,
@@ -75,7 +75,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/brush.png'),
-        category: 'Milk Tea',
+        category: 'Brush',
     },
     {
         id: 4,
@@ -83,7 +83,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/paints.png'),
-        category: 'Specialtea',
+        category: 'Paint',
     },
     {
         id: 5,
@@ -91,7 +91,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/lipGloss.png'),
-        category: 'Smoothie',
+        category: 'LipGloss',
     },
     {
         id: 6,
@@ -99,7 +99,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/lipGloss.png'),
-        category: 'Smoothie',
+        category: 'LipGloss',
     },
     {
         id: 7,
@@ -107,7 +107,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/lipGloss.png'),
-        category: 'Smoothie',
+        category: 'LipGloss',
     },
     {
         id: 8,
@@ -115,7 +115,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/lipGloss.png'),
-        category: 'Smoothie',
+        category: 'LipGloss',
     },
     {
         id: 9,
@@ -123,7 +123,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/elixir.png'),
-        category: 'Coffee',
+        category: 'Elixir',
     },
     {
         id: 10,
@@ -131,7 +131,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/elixir.png'),
-        category: 'Coffee',
+        category: 'Elixir',
     },
     {
         id: 11,
@@ -139,7 +139,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/elixir.png'),
-        category: 'Coffee',
+        category: 'Elixir',
     },
     {
         id: 12,
@@ -147,7 +147,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/elixir.png'),
-        category: 'Coffee',
+        category: 'Elixir',
     },
     {
         id: 13,
@@ -155,7 +155,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/elixir.png'),
-        category: 'Coffee',
+        category: 'Elixir',
     },
     {
         id: 14,
@@ -163,7 +163,7 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/eyeLiner.png'),
-        category: 'Snack',
+        category: 'Lipstick',
     },
     {
         id: 15,
@@ -171,24 +171,24 @@ export const menuList = [
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
         thumbnail: require('../assets/images/eyeLiner.png'),
-        category: 'Snack',
+        category: 'Lipstick',
     },
 ];
 
 export const milkList = [
     {
         id: 1,
-        name: 'Almond Milk',
+        name: 'CosmeKIt mini',
         image: require('../assets/icons/cosmetic.png'),
     },
     {
         id: 2,
-        name: 'Oat Milk',
+        name: 'CosmeKIt midi',
         image: require('../assets/icons/cosmetic2.png'),
     },
     {
         id: 3,
-        name: 'Whole Milk',
+        name: 'CosmeKIt maxi',
         image: require('../assets/icons/cosmetic3.png'),
     },
 ];
@@ -197,7 +197,7 @@ const promos = [
     {
         id: 1,
         name: 'Lipstick Sensation',
-        description: 'The best Mascara and Bronzer Available',
+        description: 'The best cosmetic products Available',
         calories: '379 - 570',
         image: require('../assets/images/makeUpBg.png'),
     },
@@ -211,7 +211,7 @@ const promos = [
     {
         id: 3,
         name: 'Neutral Eyeshadow',
-        description: 'The best Mascara and Bronzer Available',
+        description: 'The best Eyeshadow and Bronzer Available',
         calories: '449 - 570',
         image: require('../assets/images/makeUpBg.png'),
     },

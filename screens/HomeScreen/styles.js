@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         paddingTop: SIZES.padding,
     },
     promoName: {
-        color: COLORS.red,
+        color: COLORS.deepPink,
         ...FONTS.h1,
     },
     promoDescription: {

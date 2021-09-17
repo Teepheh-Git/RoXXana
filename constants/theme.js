@@ -6,7 +6,7 @@ export const COLORS = {
     primary: '#da8182',     // Green
     secondary: '#2C2C2C',    // Gray
 
-    lightPurple: '#D993B4',
+    deepPink: '#bb5e8a',
     fuschia: '#D993B4',
     yellow: '#F1CD7C',
     lightPrimary: '#e8b6b7',
@@ -14,7 +14,7 @@ export const COLORS = {
     white1: '#F1E6D8',
     lightGreen: '#7EBDA2',
     lightGreen2: '#BED2BB',
-    red: '#D84035',
+    // deepPink: '#bb5e8a',
     red2: '#FF7363',
     black: '#000000',
     gray: '#6E6E6E',
@@ -85,7 +85,7 @@ export const lightTheme = {
     tabBackgroundColor: COLORS.yellow,
     cardBackgroundColor: COLORS.lightPrimary,
     bottomTabBarBackgroundColor: COLORS.lightPrimary,
-    headerColor: COLORS.red,
+    headerColor: COLORS.deepPink,
 };
 
 export const selectedTheme = darkTheme;

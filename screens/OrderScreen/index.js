@@ -17,7 +17,7 @@ const OrderScreen = ({navigation, route, appTheme}) => {
 
     const [selectedLocation, setSelectedLocation] = useState(null);
     const [selectedTab, setSelectedTab] = useState(0);
-    const [selectedCategory, setSelectedCategory] = useState('Milk Tea');
+    const [selectedCategory, setSelectedCategory] = useState('Foundation');
     const [menu, setMenu] = useState(null);
 
     useEffect(() => {
@@ -122,44 +122,44 @@ const OrderScreen = ({navigation, route, appTheme}) => {
                         <View style={[styles.sideBarView, {backgroundColor: COLORS.primary}]}>
 
                             <VerticalTextButton
-                                label={'Snack'}
-                                selected={selectedCategory === 'Snack'}
-                                onPress={() => setSelectedCategory('Snack')}
+                                label={'Lipstik'}
+                                selected={selectedCategory === 'Lipstick'}
+                                onPress={() => setSelectedCategory('Lipstick')}
                             />
                             <VerticalTextButton
-                                label={'Coffee'}
+                                label={'Elixir'}
                                 containerStyle={{
                                     marginTop: 50,
                                 }}
-                                selected={selectedCategory === 'Coffee'}
-                                onPress={() => setSelectedCategory('Coffee')}
+                                selected={selectedCategory === 'Elixir'}
+                                onPress={() => setSelectedCategory('Elixir')}
                             />
                             <VerticalTextButton
-                                label={'Smoothie'}
+                                label={'LipGloss'}
                                 containerStyle={{
                                     marginTop: 70,
                                     width: 100,
                                 }}
-                                selected={selectedCategory === 'Smoothie'}
-                                onPress={() => setSelectedCategory('Smoothie')}
+                                selected={selectedCategory === 'LipGloss'}
+                                onPress={() => setSelectedCategory('LipGloss')}
                             />
                             <VerticalTextButton
-                                label={'Specialtea'}
+                                label={'Paint'}
                                 containerStyle={{
                                     marginTop: 90,
                                     width: 100,
                                 }}
-                                selected={selectedCategory === 'Specialtea'}
-                                onPress={() => setSelectedCategory('Specialtea')}
+                                selected={selectedCategory === 'Paint'}
+                                onPress={() => setSelectedCategory('Paint')}
                             />
                             <VerticalTextButton
-                                label={'Milk Tea'}
+                                label={'Brush'}
                                 containerStyle={{
                                     marginTop: 80,
                                     width: 80,
                                 }}
-                                selected={selectedCategory === 'Milk Tea'}
-                                onPress={() => setSelectedCategory('Milk Tea')}
+                                selected={selectedCategory === 'Brush'}
+                                onPress={() => setSelectedCategory('Brush')}
                             />
                         </View>
 

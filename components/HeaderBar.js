@@ -30,7 +30,7 @@ const HeaderBar = ({appTheme, toggleTheme}) => {
                 flex: 1,
                 paddingLeft: SIZES.padding,
             }}>
-                <Text style={{color: COLORS.white, ...FONTS.h2}}>Mynah, </Text>
+                <Text style={{color: COLORS.white, ...FONTS.h2}}>Mynah,</Text>
                 <Text style={{color: COLORS.white, ...FONTS.h2}}>Welcome Back! </Text>
             </View>
 
@@ -43,33 +43,16 @@ const HeaderBar = ({appTheme, toggleTheme}) => {
                     alignItems: 'center',
                     justifyContent: 'flex-end',
                     marginHorizontal: SIZES.padding,
-                    height: 40,
+                    height: 30,
                     borderRadius: 20,
-                    backgroundColor: COLORS.lightPurple,
-                }}>
-                {/*sun*/}
-                <View style={{
-                    height: 40,
-                    width: 40,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    ...(appTheme.name === 'light') ? styles.selectedLightModeStyle : {},
+                    backgroundColor: COLORS.deepPink,
                 }}>
 
-                    <Image
-                        source={icons.sunny}
-                        style={{
-                            height: 30,
-                            width: 30,
-                            tintColor: COLORS.white,
-                        }}>
-                    </Image>
-                </View>
 
                 {/*moon*/}
                 <View style={{
-                    height: 40,
-                    width: 40,
+                    height: 30,
+                    width: 30,
                     alignItems: 'center',
                     justifyContent: 'center',
                     ...(appTheme.name === 'dark') ? styles.selectedNightModeStyle : {},
@@ -78,8 +61,28 @@ const HeaderBar = ({appTheme, toggleTheme}) => {
                     <Image
                         source={icons.night}
                         style={{
-                            height: 30,
-                            width: 30,
+                            height: 25,
+                            width: 25,
+                            tintColor: COLORS.white,
+                        }}>
+                    </Image>
+                </View>
+
+
+                {/*sun*/}
+                <View style={{
+                    height: 30,
+                    width: 30,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    ...(appTheme.name === 'light') ? styles.selectedLightModeStyle : {},
+                }}>
+
+                    <Image
+                        source={icons.sunny}
+                        style={{
+                            height: 25,
+                            width: 25,
                             tintColor: COLORS.white,
                         }}>
                     </Image>
