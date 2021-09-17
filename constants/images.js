@@ -1,4 +1,4 @@
-const strawberryBackground = require('../assets/images/strawberry-background.png');
+const strawberryBackground = require('../assets/images/makeUpBg.png');
 
 export default {
     strawberryBackground,

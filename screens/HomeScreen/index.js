@@ -48,23 +48,17 @@ const HomeScreen = ({navigation, appTheme}) => {
                     {/*Reward cup section*/}
                     <View style={styles.rewardCup}>
 
-                        <ImageBackground
+                        <Image
                             resizeMode={'contain'}
                             source={icons.reward_cup}
                             style={styles.rewardImage}>
-
-                            <View
-                                style={styles.rewardImageView}>
-                                <Text style={styles.rewardCupText}>200</Text>
-                            </View>
-
-                        </ImageBackground>
+                        </Image>
                     </View>
 
 
                     {/*Reward Details section*/}
                     <View style={styles.rewardDetailsView}>
-                        <Text style={styles.availableRewardsView}>Available Rewards</Text>
+                        <Text style={styles.availableRewardsView}>Eligible Rewards</Text>
 
                         <View style={styles.availablePointsView}>
                             <Text style={styles.pointsText}>150 points - $2.50 off</Text>
@@ -105,7 +99,7 @@ const HomeScreen = ({navigation, appTheme}) => {
                                     {/*image*/}
                                     <Image resizeMode={'contain'}
                                            source={images.strawberryBackground}
-                                           style={{width: '100%'}}
+                                           style={{width: '90%', height: 250}}
                                     />
 
                                     {/*name*/}

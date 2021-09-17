@@ -171,10 +171,6 @@ const OrderDetail = ({navigation, route, appTheme}) => {
                                 imageStyle={{
                                     tintColor: selectedSize === 20 ? COLORS.primary : COLORS.gray2,
                                 }}>
-                                <Text style={{
-                                    color: COLORS.white,
-                                    ...FONTS.body3,
-                                }}>20oz</Text>
                             </ImageBackground>
                             <Text style={{
                                 marginTop: 3,
@@ -204,10 +200,6 @@ const OrderDetail = ({navigation, route, appTheme}) => {
                                     tintColor: selectedSize === 32 ? COLORS.primary : COLORS.gray2,
 
                                 }}>
-                                <Text style={{
-                                    color: COLORS.white,
-                                    ...FONTS.body3,
-                                }}>32oz</Text>
                             </ImageBackground>
                             <Text style={{
                                 marginTop: 3,

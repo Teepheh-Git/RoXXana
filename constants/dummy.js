@@ -58,7 +58,7 @@ export const menuList = [
         name: 'Brown Sugar Fresh Milk Tea',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/bubble-tea.png'),
+        thumbnail: require('../assets/images/brush.png'),
         category: 'Milk Tea',
     },
     {
@@ -66,7 +66,7 @@ export const menuList = [
         name: 'Matcha Milk Tea',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/bubble-tea.png'),
+        thumbnail: require('../assets/images/brush.png'),
         category: 'Milk Tea',
     },
     {
@@ -74,7 +74,7 @@ export const menuList = [
         name: 'Strawberry Milk Tea',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/bubble-tea.png'),
+        thumbnail: require('../assets/images/brush.png'),
         category: 'Milk Tea',
     },
     {
@@ -82,7 +82,7 @@ export const menuList = [
         name: 'Ice Lemon Tea',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/ice-tea.png'),
+        thumbnail: require('../assets/images/paints.png'),
         category: 'Specialtea',
     },
     {
@@ -90,7 +90,7 @@ export const menuList = [
         name: 'Berry Smoothie',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/smoothie.png'),
+        thumbnail: require('../assets/images/lipGloss.png'),
         category: 'Smoothie',
     },
     {
@@ -98,7 +98,7 @@ export const menuList = [
         name: 'Immune Booster',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/smoothie.png'),
+        thumbnail: require('../assets/images/lipGloss.png'),
         category: 'Smoothie',
     },
     {
@@ -106,7 +106,7 @@ export const menuList = [
         name: 'Very Berry',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/smoothie.png'),
+        thumbnail: require('../assets/images/lipGloss.png'),
         category: 'Smoothie',
     },
     {
@@ -114,7 +114,7 @@ export const menuList = [
         name: 'Watermelon Lychee Crush',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/smoothie.png'),
+        thumbnail: require('../assets/images/lipGloss.png'),
         category: 'Smoothie',
     },
     {
@@ -122,7 +122,7 @@ export const menuList = [
         name: 'Americano',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/coffee.png'),
+        thumbnail: require('../assets/images/elixir.png'),
         category: 'Coffee',
     },
     {
@@ -130,7 +130,7 @@ export const menuList = [
         name: 'Cappuccino',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/coffee.png'),
+        thumbnail: require('../assets/images/elixir.png'),
         category: 'Coffee',
     },
     {
@@ -138,7 +138,7 @@ export const menuList = [
         name: 'Mocha',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/coffee.png'),
+        thumbnail: require('../assets/images/elixir.png'),
         category: 'Coffee',
     },
     {
@@ -146,7 +146,7 @@ export const menuList = [
         name: 'Espresso',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/coffee.png'),
+        thumbnail: require('../assets/images/elixir.png'),
         category: 'Coffee',
     },
     {
@@ -154,7 +154,7 @@ export const menuList = [
         name: 'Long Black',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/coffee.png'),
+        thumbnail: require('../assets/images/elixir.png'),
         category: 'Coffee',
     },
     {
@@ -162,7 +162,7 @@ export const menuList = [
         name: 'Hash Brown',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/french-fries.png'),
+        thumbnail: require('../assets/images/eyeLiner.png'),
         category: 'Snack',
     },
     {
@@ -170,7 +170,7 @@ export const menuList = [
         name: 'French Fries',
         description: 'lorem ipsum dolor sit amet',
         price: '$4.50-$5.50',
-        thumbnail: require('../assets/images/french-fries.png'),
+        thumbnail: require('../assets/images/eyeLiner.png'),
         category: 'Snack',
     },
 ];
@@ -179,41 +179,41 @@ export const milkList = [
     {
         id: 1,
         name: 'Almond Milk',
-        image: require('../assets/icons/milk.png'),
+        image: require('../assets/icons/cosmetic.png'),
     },
     {
         id: 2,
         name: 'Oat Milk',
-        image: require('../assets/icons/milk2.png'),
+        image: require('../assets/icons/cosmetic2.png'),
     },
     {
         id: 3,
         name: 'Whole Milk',
-        image: require('../assets/icons/milk3.png'),
+        image: require('../assets/icons/cosmetic3.png'),
     },
 ];
 
 const promos = [
     {
         id: 1,
-        name: 'Strawberry Sensation',
+        name: 'Strawberry',
         description: 'Strawberry smoothie with strawberry bits',
         calories: '379 - 570',
-        image: require('../assets/images/strawberry-background.png'),
+        image: require('../assets/images/makeUpBg.png'),
     },
     {
         id: 2,
         name: 'Strawberry Sensation',
         description: 'Strawberry smoothie with strawberry bits',
         calories: '400 - 570',
-        image: require('../assets/images/strawberry-background.png'),
+        image: require('../assets/images/makeUpBg.png'),
     },
     {
         id: 3,
         name: 'Strawberry Sensation',
         description: 'Strawberry smoothie with strawberry bits',
         calories: '449 - 570',
-        image: require('../assets/images/strawberry-background.png'),
+        image: require('../assets/images/makeUpBg.png'),
     },
 
 ];

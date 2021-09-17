@@ -29,9 +29,8 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 15,
     },
     rewardImage: {
-        width: 85,
-        height: 85,
-        marginLeft: 3,
+        width: 70,
+        height: 70,
         alignItems: 'center',
         justifyContent: 'center',
     },

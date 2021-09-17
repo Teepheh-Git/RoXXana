@@ -3,7 +3,7 @@ import {
     View,
     Text,
     FlatList,
-    ImageBackground,
+    Image,
 } from 'react-native';
 import {connect} from 'react-redux';
 import HeaderBar from '../../components/HeaderBar';
@@ -36,15 +36,11 @@ const RewardScreen = ({navigation, appTheme}) => {
 
 
                             {/*Image*/}
-                            <ImageBackground
+                            <Image
                                 resizeMode={'contain'}
                                 source={icons.reward_cup}
                                 style={styles.rewardImage}>
-
-                                <View style={styles.rewardImageView}>
-                                    <Text style={{...FONTS.h1}}>280</Text>
-                                </View>
-                            </ImageBackground>
+                            </Image>
                         </View>
 
                         {/*button*/}
