@@ -29,10 +29,8 @@ const HeaderBar = ({appTheme, toggleTheme}) => {
             <View style={{
                 flex: 1,
                 paddingLeft: SIZES.padding,
-            }}
-            >
-
-                <Text style={{color: COLORS.white, ...FONTS.h2}}>Boluwatife, </Text>
+            }}>
+                <Text style={{color: COLORS.white, ...FONTS.h2}}>Mynah, </Text>
                 <Text style={{color: COLORS.white, ...FONTS.h2}}>Welcome Back! </Text>
             </View>
 

@@ -1,7 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {
     View,
-    Text, ScrollView, Image, TouchableOpacity, ImageBackground,
+    Text,
+    ScrollView,
+    Image,
+    TouchableOpacity,
+    ImageBackground,
 } from 'react-native';
 import {connect} from 'react-redux';
 import {COLORS, dummyData} from '../../constants';
@@ -221,6 +225,5 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {};
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(OrderDetailScreen);

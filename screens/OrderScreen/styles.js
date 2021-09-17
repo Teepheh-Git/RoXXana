@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: SIZES.radius,
-        backgroundColor: COLORS.lightYellow,
+        backgroundColor: COLORS.lightPrimary,
         zIndex: 1,
     },
     thumbnailDetails: {
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
         lineHeight: 25,
     },
     thumbnailPrice: {
-        color: COLORS.lightYellow,
+        color: COLORS.lightPrimary,
         ...FONTS.h2,
         fontSize: 18,
     },

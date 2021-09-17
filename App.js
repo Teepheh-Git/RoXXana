@@ -8,10 +8,11 @@ import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import themeReducer from './stores/themeReducer';
 
-import Tabs from './navigation/tabs';
 import LocationScreen from './screens/LocationScreen';
 import OrderScreen from './screens/OrderScreen';
 import OrderDetailScreen from './screens/OrderDetailScreen';
+import HomeScreen from './screens/HomeScreen';
+import RewardScreen from './screens/RewardScreen';
 
 const Stack = createStackNavigator();
 
@@ -39,8 +40,12 @@ const App = () => {
                     initialRouteName={'Index'}
                 >
                     <Stack.Screen
-                        name="Index"
-                        component={Tabs}
+                        name="Home"
+                        component={HomeScreen}
+                    />
+                    <Stack.Screen
+                        name="Reward"
+                        component={RewardScreen}
                     />
 
                     <Stack.Screen

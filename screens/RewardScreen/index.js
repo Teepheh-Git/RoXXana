@@ -32,7 +32,7 @@ const RewardScreen = ({navigation, appTheme}) => {
                             {/*Texts*/}
                             <Text style={styles.rewardPointsText}>Rewards</Text>
                             <Text style={[styles.rewardPointsDetailsText, {color: appTheme.textColor}]}>
-                                You are 45 points away from your next reward</Text>
+                                You are 45 buys away from your next reward</Text>
 
 
                             {/*Image*/}

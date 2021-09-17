@@ -1,22 +1,22 @@
 export const availableRewards = [
     {
         id: 1,
-        title: '150 points - $2.50 off',
+        title: '15 buys - 21.50% off',
         eligible: true,
     },
     {
         id: 2,
-        title: '340 points - any 20oz tea or coffee',
+        title: '34 buys - any CosmeKIt or Concealer',
         eligible: false,
     },
     {
         id: 3,
-        title: '400 points - any 2 x 20oz tea or coffee',
-        eligible: false,
+        title: '40 buys - any 2x CosmeKIt',
+        eligible: true,
     },
     {
         id: 4,
-        title: '500 points - any 3 x 20oz tea or coffee',
+        title: '50000 buys - lifetime Supply of CosmeKIt',
         eligible: false,
     },
 ];
@@ -24,31 +24,31 @@ export const availableRewards = [
 export const locations = [
     {
         id: 1,
-        title: 'Garden Grove #1',
-        address: '10189 Westminster Avenue Garden Grove, CA',
+        title: 'Yaba Onipan',
+        address: '356 Yaba Avenue Grove street, Lagos',
         operation_hours: 'Sunday - Thursday: 10AM - 11PM \nFriday - Saturday: 10AM - Midnight',
         bookmarked: true,
     },
     {
         id: 2,
-        title: 'Garden Grove #2',
-        address: '10189 Westminster Avenue Garden Grove, CA',
+        title: 'Gwagwalada',
+        address: '101 govt. office, FCT',
         operation_hours: 'Sunday - Thursday: 10AM - 11PM \nFriday - Saturday: 10AM - Midnight',
         bookmarked: false,
     },
     {
         id: 3,
-        title: 'Garden Grove #3',
-        address: '10189 Westminster Avenue Garden Grove, CA',
+        title: 'Akoka',
+        address: '454, Unilag way, Lagos',
         operation_hours: 'Sunday - Thursday: 10AM - 11PM \nFriday - Saturday: 10AM - Midnight',
-        bookmarked: true,
+        bookmarked: false,
     },
     {
         id: 4,
-        title: 'Garden Grove #4',
-        address: '10189 Westminster Avenue Garden Grove, CA',
+        title: 'Tanke',
+        address: '10 Asa Dam, succoth Garden, Ilorin',
         operation_hours: 'Sunday - Thursday: 10AM - 11PM \nFriday - Saturday: 10AM - Midnight',
-        bookmarked: false,
+        bookmarked: true,
     },
 ];
 
@@ -196,22 +196,22 @@ export const milkList = [
 const promos = [
     {
         id: 1,
-        name: 'Strawberry',
-        description: 'Strawberry smoothie with strawberry bits',
+        name: 'Lipstick Sensation',
+        description: 'The best Mascara and Bronzer Available',
         calories: '379 - 570',
         image: require('../assets/images/makeUpBg.png'),
     },
     {
         id: 2,
-        name: 'Strawberry Sensation',
-        description: 'Strawberry smoothie with strawberry bits',
+        name: 'Mascara & Bronzer',
+        description: 'The best Mascara and Bronzer Available',
         calories: '400 - 570',
         image: require('../assets/images/makeUpBg.png'),
     },
     {
         id: 3,
-        name: 'Strawberry Sensation',
-        description: 'Strawberry smoothie with strawberry bits',
+        name: 'Neutral Eyeshadow',
+        description: 'The best Mascara and Bronzer Available',
         calories: '449 - 570',
         image: require('../assets/images/makeUpBg.png'),
     },

@@ -4,12 +4,11 @@ import {
     Text,
     TouchableOpacity,
     ScrollView,
-    ImageBackground,
     Animated,
     Image,
 } from 'react-native';
 import {CustomButton, HeaderBar} from '../../components';
-import {COLORS, dummyData, FONTS, SIZES} from '../../constants';
+import {dummyData, FONTS, SIZES} from '../../constants';
 import {connect} from 'react-redux';
 import icons from '../../constants/icons';
 import images from '../../constants/images';
@@ -61,7 +60,7 @@ const HomeScreen = ({navigation, appTheme}) => {
                         <Text style={styles.availableRewardsView}>Eligible Rewards</Text>
 
                         <View style={styles.availablePointsView}>
-                            <Text style={styles.pointsText}>150 points - $2.50 off</Text>
+                            <Text style={styles.pointsText}>15 buys - 21.50% off</Text>
                         </View>
                     </View>
                 </TouchableOpacity>

@@ -6,10 +6,10 @@ export const COLORS = {
     primary: '#da8182',     // Green
     secondary: '#2C2C2C',    // Gray
 
-    lightPurple: '#7B789F',
+    lightPurple: '#D993B4',
     fuschia: '#D993B4',
     yellow: '#F1CD7C',
-    lightYellow: '#FFD88A',
+    lightPrimary: '#e8b6b7',
     white: '#fff',
     white1: '#F1E6D8',
     lightGreen: '#7EBDA2',
@@ -83,8 +83,8 @@ export const lightTheme = {
     backgroundColor: COLORS.lightGray3,
     textColor: COLORS.black,
     tabBackgroundColor: COLORS.yellow,
-    cardBackgroundColor: COLORS.lightYellow,
-    bottomTabBarBackgroundColor: COLORS.lightYellow,
+    cardBackgroundColor: COLORS.lightPrimary,
+    bottomTabBarBackgroundColor: COLORS.lightPrimary,
     headerColor: COLORS.red,
 };
 
