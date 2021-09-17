@@ -1,6 +1,6 @@
 import Home from './HomeScreen';
 import Location from './LocationScreen';
-import Order from './Order';
+import Order from './OrderScreen';
 import OrderDetail from './OrderDetail';
 import Reward from './RewardScreen';
 
