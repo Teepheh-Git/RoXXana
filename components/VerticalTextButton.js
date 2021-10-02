@@ -1,6 +1,5 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
-import {on} from 'yarn/lib/cli';
 import {COLORS, FONTS} from '../constants';
 
 const VerticalTextButton = ({containerStyle, label, selected, onPress}) => {

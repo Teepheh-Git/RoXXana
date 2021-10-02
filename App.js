@@ -23,9 +23,9 @@ const store = createStore(
 
 const App = () => {
 
-    React.useEffect(() => {
-        SplashScreen.hide();
-    }, []);
+    // React.useEffect(() => {
+    //     SplashScreen.hide();
+    // }, []);
 
     return (
 
